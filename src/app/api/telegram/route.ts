@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 
 export async function POST(request: Request) {
-  const { message } = await request.json();
+  const { message, orderCode } = await request.json();
 
   const token = process.env.TELEGRAM_BOT_TOKEN;
   const adminId = process.env.TELEGRAM_ADMIN_ID;
@@ -16,6 +16,16 @@ export async function POST(request: Request) {
       body: JSON.stringify({
         chat_id: adminId,
         text: message,
+        reply_markup: {
+        inline_keyboard: [
+        [
+        {
+          text: "✅ Подтвердить оплату",
+          callback_data: `confirm_${orderCode}`,
+        },
+        ],
+        ],
+        },
       }),
     }
   );
