@@ -21,6 +21,7 @@ export async function POST(req: Request) {
   if (text.startsWith("/start")) {
     const parts = text.split(" ");
     const orderCode = parts[1];
+    console.log("SUPABASE URL:", process.env.NEXT_PUBLIC_SUPABASE_URL);
 
     if (!orderCode) {
       return NextResponse.json({ ok: true });
