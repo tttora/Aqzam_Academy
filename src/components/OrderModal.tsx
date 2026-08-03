@@ -46,7 +46,7 @@ export default function OrderModal({
             alert("Қате орын алды");
             return;
         }
-
+        console.log("SENDING TELEGRAM", orderCode);
         const telegramResponse = await fetch("/api/telegram", {
             method: "POST",
             headers: {
