@@ -55,23 +55,24 @@ export default function OrderModal({
 
         body: JSON.stringify({
             message: `
-            🔔 Жаңа тапсырыс!
+                🔔 Жаңа тапсырыс!
 
-            🆔 Код: ${orderCode}
+                🆔 Код: ${orderCode}
 
-            👤 Аты: ${name}
+                👤 Аты: ${name}
 
-            📧 Email: ${email}
+                📧 Email: ${email}
 
-            📱 Телефон: ${phone}
+                📱 Телефон: ${phone}
 
-            📚 Курс: ${product}
+                📚 Курс: ${product}
 
-            💰 Бағасы: ${amount} ₸
+                💰 Бағасы: ${amount} ₸
 
 
-            ⏳ Төлем күтілуде
+                ⏳ Төлем күтілуде
             `,
+            orderCode,
         }),
     });
 
