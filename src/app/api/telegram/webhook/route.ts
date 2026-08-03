@@ -3,6 +3,7 @@ import { supabase } from "@/lib/supabase";
 
 export async function POST(req: Request) {
   const update = await req.json();
+  console.log("FROM WEBSITE:", update);
 
   console.log("NEW UPDATE:");
   console.log(JSON.stringify(update, null, 2));
