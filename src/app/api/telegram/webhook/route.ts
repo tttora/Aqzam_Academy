@@ -26,24 +26,33 @@ export async function POST(req: Request) {
       return NextResponse.json({ ok: true });
     }
 
+    console.log("ORDER CODE FROM TELEGRAM:", orderCode);
+
     const { data: order, error } = await supabase
       .from("orders")
       .select("*")
       .eq("order_code", orderCode)
       .single();
 
+    console.log("FOUND ORDER:", order);
+    console.log("FIND ERROR:", error);
+
     if (error || !order) {
       console.log("Order not found");
       return NextResponse.json({ ok: true });
     }
 
-    await supabase
-      .from("orders")
-      .update({
-        telegram_chat_id: chatId,
-        telegram_username: username,
-      })
-      .eq("order_code", orderCode);
+    const { data: updatedOrder, error: updateError } = await supabase
+        .from("orders")
+        .update({
+            telegram_chat_id: chatId,
+            telegram_username: username,
+        })
+        .eq("order_code", orderCode)
+        .select();
+
+    console.log("UPDATED ORDER:", updatedOrder);
+    console.log("UPDATE ERROR:", updateError);
 
     console.log("Telegram connected:", orderCode);
 
