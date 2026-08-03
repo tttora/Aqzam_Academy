@@ -23,49 +23,73 @@ export default function OrderModal({
   const [submitted, setSubmitted] = useState(false);
 
   async function handleSubmit() {
+    const orderCode = `AQZ-${Math.floor(100000 + Math.random() * 900000)}`;
+    console.log("ORDER CODE:", orderCode);
     const { error } = await supabase
-      .from("orders")
-      .insert({
-        costumer_name: name,
-        email,
-        phone,
-        product,
-        amount,
-        payment_status: "pending",
-        telegram_invite_link: "",
-      });
+        .from("orders")
+        .insert({
+            order_code: orderCode,
 
-    if (error) {
-      console.log(error);
-      alert("Қате орын алды");
-      return;
-    }
+            costumer_name: name,
+            email,
+            phone,
+            product,
+            amount,
 
-    const telegramResponse = await fetch("/api/telegram", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        message: `
-🔔 Жаңа тапсырыс!
+            payment_status: "pending",
 
-👤 Аты: ${name}
-📧 Email: ${email}
-📱 Телефон: ${phone}
+            telegram_invite_link: "",
+        });
 
-📚 Курс: ${product}
-💰 Бағасы: ${amount} ₸
+        if (error) {
+            console.log(error);
+            alert("Қате орын алды");
+            return;
+        }
 
-⏳ Төлем күтілуде
-        `,
-      }),
+        const telegramResponse = await fetch("/api/telegram", {
+            method: "POST",
+            headers: {
+            "Content-Type": "application/json",
+        },
+
+        body: JSON.stringify({
+            message: `
+            🔔 Жаңа тапсырыс!
+
+            🆔 Код: ${orderCode}
+
+            👤 Аты: ${name}
+
+            📧 Email: ${email}
+
+            📱 Телефон: ${phone}
+
+            📚 Курс: ${product}
+
+            💰 Бағасы: ${amount} ₸
+
+
+            ⏳ Төлем күтілуде
+            `,
+        }),
     });
 
     const telegramData = await telegramResponse.json();
     console.log("Telegram:", telegramData);
 
     setSubmitted(true);
+
+    alert(`
+        Тапсырыс қабылданды!
+
+        Сіздің код:
+        ${orderCode}
+
+        Telegram ботқа енгізіңіз:
+
+        /start ${orderCode}
+        `);
   }
 
   return (
