@@ -1,7 +1,13 @@
 import { NextResponse } from "next/server";
 
 export async function POST(request: Request) {
-  const { message, orderCode } = await request.json();
+  const body = await request.json();
+
+  console.log("BODY:", body);
+
+  const { message, orderCode } = body;
+
+  console.log("ORDER CODE:", orderCode);
 
   const token = process.env.TELEGRAM_BOT_TOKEN;
   const adminId = process.env.TELEGRAM_ADMIN_ID;
