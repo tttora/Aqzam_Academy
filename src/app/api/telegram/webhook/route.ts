@@ -4,16 +4,38 @@ import { telegramChannels } from "@/lib/telegramChannels";
 
 export async function POST(req: Request) {
   const update = await req.json();
-  console.log("FROM WEBSITE:", update);
-
-  console.log("NEW UPDATE:");
-  console.log(JSON.stringify(update, null, 2));
   if (update.callback_query) {
   const callbackData = update.callback_query.data;
 
   if (callbackData.startsWith("confirm_")) {
     const orderCode = callbackData.replace("confirm_", "");
+    const { data: order } = await supabaseAdmin
+      .from("orders")
+      .select("*")
+      .eq("order_code", orderCode)
+      .single();
 
+      if (!order) {
+      return NextResponse.json({ ok: true });
+    }
+    if (order.payment_status === "paid") {
+      await fetch(
+        `https://api.telegram.org/bot${process.env.TELEGRAM_BOT_TOKEN}/answerCallbackQuery`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            callback_query_id: update.callback_query.id,
+            text: "⚠️ Бұл тапсырыстың төлемі бұрын расталған.",
+            show_alert: true,
+          }),
+        }
+      );
+    
+      return NextResponse.json({ ok: true });
+    }
     console.log("CONFIRM ORDER:", orderCode);
 
     const { data: updatedOrder, error } = await supabaseAdmin
@@ -43,21 +65,57 @@ if (paidOrder) {
         body: JSON.stringify({
           chat_id: paidOrder.telegram_chat_id,
           text: `
-✅ Оплата подтверждена!
+            🎉 Төлеміңіз сәтті расталды!
 
-Ваш доступ к материалам:
+            Құрметті оқырман!
 
-${channels
-  .map((link, index) => `${index + 1}. ${link}`)
-  .join("\n")}
+            Материалдарыңызға қолжетімділік ашылды.
 
-Спасибо за покупку ❤️
-          `,
+            📚 Сілтемелер:
+
+            ${channels
+              .map((link, index) => `${index + 1}. ${link}`)
+              .join("\n")}
+
+            ━━━━━━━━━━━━━━━
+
+            📩 Сұрақтарыңыз болса,
+            бізбен әрқашан байланыса аласыз.
+
+            Іске сәт! 💜
+
+            Aqzam Academy
+            `,   
+          
         }),
       }
     );
   }
 }
+
+await fetch(
+  `https://api.telegram.org/bot${process.env.TELEGRAM_BOT_TOKEN}/editMessageReplyMarkup`,
+  {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      chat_id: update.callback_query.message.chat.id,
+      message_id: update.callback_query.message.message_id,
+      reply_markup: {
+        inline_keyboard: [
+          [
+            {
+              text: "✅ Төлем расталды!",
+              callback_data: "already_paid",
+            },
+          ],
+        ],
+      },
+    }),
+  }
+);
 
     await fetch(
       `https://api.telegram.org/bot${process.env.TELEGRAM_BOT_TOKEN}/sendMessage`,
@@ -69,9 +127,9 @@ ${channels
         body: JSON.stringify({
           chat_id: update.callback_query.message.chat.id,
           text: `
-            ✅ Оплата подтверждена!
+            ✅ Төлем сәтті расталды.
 
-            Код заказа:
+            Тапсырыс коды:
             ${orderCode}
           `,
         }),
@@ -104,6 +162,7 @@ ${channels
     if (!orderCode) {
       return NextResponse.json({ ok: true });
     }
+
 
     console.log("ORDER CODE FROM TELEGRAM:", orderCode);
 
@@ -145,12 +204,12 @@ ${channels
         body: JSON.stringify({
           chat_id: chatId,
           text: `
-✅ Код принят!
+          ✅ Код қабылданды!
 
-Ваш заказ:
-${order.product}
+          Сіздің тапсырысыңыз:
+          ${order.product}
 
-Ожидаем подтверждение оплаты.
+          Төлем расталғаннан кейін материалдарға қолжетімділік беріледі.
           `,
         }),
       }
