@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { supabaseAdmin } from "@/lib/supabaseAdmin";
+import { telegramChannels } from "@/lib/telegramChannels";
 
 export async function POST(req: Request) {
   const update = await req.json();
@@ -25,6 +26,38 @@ export async function POST(req: Request) {
 
     console.log("PAYMENT UPDATED:", updatedOrder);
     console.log("PAYMENT ERROR:", error);
+
+    const paidOrder = updatedOrder?.[0];
+
+if (paidOrder) {
+  const channels = telegramChannels[paidOrder.product] || [];
+
+  if (channels.length > 0 && paidOrder.telegram_chat_id) {
+    await fetch(
+      `https://api.telegram.org/bot${process.env.TELEGRAM_BOT_TOKEN}/sendMessage`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          chat_id: paidOrder.telegram_chat_id,
+          text: `
+✅ Оплата подтверждена!
+
+Ваш доступ к материалам:
+
+${channels
+  .map((link, index) => `${index + 1}. ${link}`)
+  .join("\n")}
+
+Спасибо за покупку ❤️
+          `,
+        }),
+      }
+    );
+  }
+}
 
     await fetch(
       `https://api.telegram.org/bot${process.env.TELEGRAM_BOT_TOKEN}/sendMessage`,
