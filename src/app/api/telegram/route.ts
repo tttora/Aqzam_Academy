@@ -26,8 +26,8 @@ export async function POST(request: Request) {
         inline_keyboard: [
           [
             {
-              text: `TEST ${orderCode}`,
-              callback_data: "TEST123",
+              text: "✅ Төлемді растау",
+              callback_data: `confirm_${orderCode}`,
             },
           ],
         ],
