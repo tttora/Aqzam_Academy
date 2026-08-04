@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { supabase } from "@/lib/supabase";
+import { supabaseAdmin } from "@/lib/supabaseAdmin";
 
 export async function POST(req: Request) {
   const update = await req.json();
@@ -15,7 +15,7 @@ export async function POST(req: Request) {
 
     console.log("CONFIRM ORDER:", orderCode);
 
-    const { data: updatedOrder, error } = await supabase
+    const { data: updatedOrder, error } = await supabaseAdmin
       .from("orders")
       .update({
         payment_status: "paid",
@@ -70,7 +70,7 @@ export async function POST(req: Request) {
 
     console.log("ORDER CODE FROM TELEGRAM:", orderCode);
 
-    const { data: order, error } = await supabase
+    const { data: order, error } = await supabaseAdmin
       .from("orders")
       .select("*")
       .eq("order_code", orderCode)
@@ -84,7 +84,7 @@ export async function POST(req: Request) {
       return NextResponse.json({ ok: true });
     }
 
-    const { data: updatedOrder, error: updateError } = await supabase
+    const { data: updatedOrder, error: updateError } = await supabaseAdmin
         .from("orders")
         .update({
             telegram_chat_id: chatId,
