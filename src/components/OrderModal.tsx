@@ -74,7 +74,7 @@ export default function OrderModal({
 
                 ⏳ Төлем күтілуде
             `,
-            orederCode: newOrderCode,
+            orderCode: newOrderCode,
         }),
     });
 
