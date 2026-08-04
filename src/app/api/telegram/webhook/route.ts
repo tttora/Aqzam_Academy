@@ -7,7 +7,47 @@ export async function POST(req: Request) {
 
   console.log("NEW UPDATE:");
   console.log(JSON.stringify(update, null, 2));
+  if (update.callback_query) {
+  const callbackData = update.callback_query.data;
 
+  if (callbackData.startsWith("confirm_")) {
+    const orderCode = callbackData.replace("confirm_", "");
+
+    console.log("CONFIRM ORDER:", orderCode);
+
+    const { data: updatedOrder, error } = await supabase
+      .from("orders")
+      .update({
+        payment_status: "paid",
+      })
+      .eq("order_code", orderCode)
+      .select();
+
+    console.log("PAYMENT UPDATED:", updatedOrder);
+    console.log("PAYMENT ERROR:", error);
+
+    await fetch(
+      `https://api.telegram.org/bot${process.env.TELEGRAM_BOT_TOKEN}/sendMessage`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          chat_id: update.callback_query.message.chat.id,
+          text: `
+            ✅ Оплата подтверждена!
+
+            Код заказа:
+            ${orderCode}
+          `,
+        }),
+      }
+    );
+  }
+
+  return NextResponse.json({ ok: true });
+}
   const message = update.message;
 
   if (!message) {
