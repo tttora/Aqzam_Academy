@@ -20,7 +20,7 @@ export async function POST(request: Request) {
         inline_keyboard: [
         [
         {
-          text: "✅ Подтвердить оплату",
+          text: "✅ Төлемді растау",
           callback_data: `confirm_${orderCode}`,
         },
         ],

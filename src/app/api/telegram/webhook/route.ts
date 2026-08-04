@@ -3,7 +3,13 @@ import { supabaseAdmin } from "@/lib/supabaseAdmin";
 import { telegramChannels } from "@/lib/telegramChannels";
 
 export async function POST(req: Request) {
+  console.log("🚀 WEBHOOK START");
+
   const update = await req.json();
+
+  console.log("FROM TELEGRAM:", update);
+  console.log("FULL UPDATE:");
+  console.log(JSON.stringify(update, null, 2));
   if (update.callback_query) {
   const callbackData = update.callback_query.data;
 
@@ -51,71 +57,71 @@ export async function POST(req: Request) {
 
     const paidOrder = updatedOrder?.[0];
 
-if (paidOrder) {
-  const channels = telegramChannels[paidOrder.product] || [];
+    if (paidOrder) {
+      const channels = telegramChannels[paidOrder.product] || [];
 
-  if (channels.length > 0 && paidOrder.telegram_chat_id) {
+      if (channels.length > 0 && paidOrder.telegram_chat_id) {
+        await fetch(
+          `https://api.telegram.org/bot${process.env.TELEGRAM_BOT_TOKEN}/sendMessage`,
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              chat_id: paidOrder.telegram_chat_id,
+              text: `
+                🎉 Төлеміңіз сәтті расталды!
+
+                Құрметті оқырман!
+
+                Материалдарыңызға қолжетімділік ашылды.
+
+                📚 Сілтемелер:
+
+                ${channels
+                  .map((link, index) => `${index + 1}. ${link}`)
+                  .join("\n")}
+
+                ━━━━━━━━━━━━━━━
+
+                📩 Сұрақтарыңыз болса,
+                бізбен әрқашан байланыса аласыз.
+
+                Іске сәт! 💜
+
+                Aqzam Academy
+                `,   
+              
+            }),
+          }
+        );
+      }
+    }
+
     await fetch(
-      `https://api.telegram.org/bot${process.env.TELEGRAM_BOT_TOKEN}/sendMessage`,
+      `https://api.telegram.org/bot${process.env.TELEGRAM_BOT_TOKEN}/editMessageReplyMarkup`,
       {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          chat_id: paidOrder.telegram_chat_id,
-          text: `
-            🎉 Төлеміңіз сәтті расталды!
-
-            Құрметті оқырман!
-
-            Материалдарыңызға қолжетімділік ашылды.
-
-            📚 Сілтемелер:
-
-            ${channels
-              .map((link, index) => `${index + 1}. ${link}`)
-              .join("\n")}
-
-            ━━━━━━━━━━━━━━━
-
-            📩 Сұрақтарыңыз болса,
-            бізбен әрқашан байланыса аласыз.
-
-            Іске сәт! 💜
-
-            Aqzam Academy
-            `,   
-          
+          chat_id: update.callback_query.message.chat.id,
+          message_id: update.callback_query.message.message_id,
+          reply_markup: {
+            inline_keyboard: [
+              [
+                {
+                  text: "✅ Төлем расталды!",
+                  callback_data: "already_paid",
+                },
+              ],
+            ],
+          },
         }),
       }
     );
-  }
-}
-
-await fetch(
-  `https://api.telegram.org/bot${process.env.TELEGRAM_BOT_TOKEN}/editMessageReplyMarkup`,
-  {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      chat_id: update.callback_query.message.chat.id,
-      message_id: update.callback_query.message.message_id,
-      reply_markup: {
-        inline_keyboard: [
-          [
-            {
-              text: "✅ Төлем расталды!",
-              callback_data: "already_paid",
-            },
-          ],
-        ],
-      },
-    }),
-  }
-);
 
     await fetch(
       `https://api.telegram.org/bot${process.env.TELEGRAM_BOT_TOKEN}/sendMessage`,

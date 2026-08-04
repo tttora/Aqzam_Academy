@@ -87,7 +87,7 @@ export default function OrderModal({
   }
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40">
+    <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/40">
 
       <div className="w-[90%] max-w-md rounded-3xl bg-white p-8">
 
@@ -179,20 +179,6 @@ export default function OrderModal({
               className="mb-3 w-full rounded-xl border border-violet-200 bg-violet-50 p-3 text-slate-900 placeholder:text-slate-500"
               onChange={(e) => setPhone(e.target.value)}
             />
-
-            <p className="mb-4 rounded-2xl bg-violet-50 p-4 text-sm text-slate-700">
-                ⚠️ Төлем жасамас бұрын Telegram ботымызға кіріп,
-                <span className="font-semibold"> Start </span>
-                батырмасын басыңыз.
-            </p>
-
-            <a
-                href="https://t.me/S_GulfairuzBot"
-                target="_blank"
-                className="mb-4 block w-full rounded-full bg-sky-500 py-3 text-center font-semibold text-white transition hover:bg-sky-600"
-            >
-            🤖 Telegram ботты ашу
-            </a>
 
             <button
               onClick={handleSubmit}
