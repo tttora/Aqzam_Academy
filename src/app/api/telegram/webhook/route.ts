@@ -63,6 +63,10 @@ export async function POST(req: Request) {
     const parts = text.split(" ");
     const orderCode = parts[1];
     console.log("SUPABASE URL:", process.env.NEXT_PUBLIC_SUPABASE_URL);
+    console.log(
+        "SERVICE KEY EXISTS:",
+        !!process.env.SUPABASE_SERVICE_ROLE_KEY
+    );
 
     if (!orderCode) {
       return NextResponse.json({ ok: true });
