@@ -24,14 +24,14 @@ export async function POST(request: Request) {
         text: message,
         reply_markup: {
         inline_keyboard: [
-        [
-        {
-          text: "✅ Төлемді растау",
-          callback_data: `confirm_${orderCode}`,
-        },
+          [
+            {
+              text: `TEST ${orderCode}`,
+              callback_data: "TEST123",
+            },
+          ],
         ],
-        ],
-        },
+      },
       }),
     }
   );
