@@ -21,7 +21,7 @@ export default function Header() {
         className="
           fixed
           left-1/2
-          top-6
+          top-4
           z-50
           flex
           w-[92%]
@@ -33,10 +33,14 @@ export default function Header() {
           border
           border-white/40
           bg-white/25
-          px-5
-          py-3
+          px-4
+          py-2.5
           shadow-lg
           backdrop-blur-2xl
+
+          sm:px-6
+          sm:py-3
+
           md:px-8
         "
       >
@@ -48,6 +52,14 @@ export default function Header() {
             width={95}
             height={95}
             priority
+            className="
+              h-[60px]
+              w-auto
+
+              sm:h-[70px]
+
+              lg:h-[90px]
+            "
           />
         </a>
 
@@ -66,7 +78,8 @@ export default function Header() {
 
         {/* Right Side */}
         <div className="flex items-center gap-3">
-          <button className="hidden sm:block rounded-full bg-violet-600 px-6 py-3 font-semibold text-white transition hover:bg-violet-700">
+
+          <button className="hidden md:block rounded-full bg-violet-600 px-6 py-3 font-semibold text-white transition hover:bg-violet-700">
             Сатып алу
           </button>
 
@@ -80,14 +93,12 @@ export default function Header() {
               items-center
               justify-center
               rounded-full
-              border
-              border-violet-200
-              bg-white
+              bg-violet-600
               shadow-lg
               transition
               duration-200
               hover:scale-105
-              hover:bg-violet-50
+              hover:bg-violet-700
               active:scale-95
               lg:hidden
             "
@@ -95,12 +106,12 @@ export default function Header() {
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="28"
-              height="28"
+              width="26"
+              height="26"
               viewBox="0 0 24 24"
               fill="none"
-              stroke="#6D28D9"
-              strokeWidth="2.5"
+              stroke="white"
+              strokeWidth="2.8"
               strokeLinecap="round"
               strokeLinejoin="round"
             >
@@ -118,49 +129,57 @@ export default function Header() {
               )}
             </svg>
           </button>
+
         </div>
       </header>
 
       {/* Mobile Menu */}
       {open && (
-        <div
-          className="
-            fixed
-            left-1/2
-            top-28
-            z-40
-            w-[92%]
-            -translate-x-1/2
-            rounded-[28px]
-            border
-            border-white/40
-            bg-white/90
-            p-6
-            shadow-2xl
-            backdrop-blur-2xl
-            lg:hidden
-          "
-        >
-          <nav className="flex flex-col gap-5 text-lg font-semibold text-gray-700">
-            {links.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                onClick={() => setOpen(false)}
-                className="transition hover:text-violet-700"
-              >
-                {link.label}
-              </a>
-            ))}
+        <>
+          <div
+            className="fixed inset-0 z-30 bg-black/30 lg:hidden"
+            onClick={() => setOpen(false)}
+          />
 
-            <button
-              onClick={() => setOpen(false)}
-              className="mt-3 rounded-full bg-violet-600 py-3 font-semibold text-white transition hover:bg-violet-700"
-            >
-              Сатып алу
-            </button>
-          </nav>
-        </div>
+          <div
+            className="
+              fixed
+              left-1/2
+              top-24
+              z-40
+              w-[92%]
+              -translate-x-1/2
+              rounded-[28px]
+              border
+              border-white/40
+              bg-white/95
+              p-6
+              shadow-2xl
+              backdrop-blur-2xl
+              lg:hidden
+            "
+          >
+            <nav className="flex flex-col gap-5 text-lg font-semibold text-gray-700">
+              {links.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setOpen(false)}
+                  className="transition hover:text-violet-700"
+                >
+                  {link.label}
+                </a>
+              ))}
+
+              <button
+                onClick={() => setOpen(false)}
+                className="mt-3 rounded-full bg-violet-600 py-3 font-semibold text-white transition hover:bg-violet-700"
+              >
+                Сатып алу
+              </button>
+            </nav>
+          </div>
+        </>
       )}
     </>
   );
