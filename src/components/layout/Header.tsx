@@ -40,6 +40,7 @@ export default function Header() {
           md:px-8
         "
       >
+        {/* Logo */}
         <a href="/">
           <Image
             src="/images/logo.png"
@@ -63,6 +64,7 @@ export default function Header() {
           ))}
         </nav>
 
+        {/* Right Side */}
         <div className="flex items-center gap-3">
           <button className="hidden sm:block rounded-full bg-violet-600 px-6 py-3 font-semibold text-white transition hover:bg-violet-700">
             Сатып алу
@@ -71,23 +73,47 @@ export default function Header() {
           {/* Burger */}
           <button
             onClick={() => setOpen(!open)}
-            className="flex h-11 w-11 items-center justify-center rounded-full bg-white/70 lg:hidden"
+            className="
+              flex
+              h-12
+              w-12
+              items-center
+              justify-center
+              rounded-full
+              border
+              border-violet-200
+              bg-white
+              shadow-lg
+              transition
+              duration-200
+              hover:scale-105
+              hover:bg-violet-50
+              active:scale-95
+              lg:hidden
+            "
+            aria-label="Menu"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="26"
-              height="26"
+              width="28"
+              height="28"
+              viewBox="0 0 24 24"
               fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
+              stroke="#6D28D9"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             >
               {open ? (
-                <path d="M18 6L6 18M6 6l12 12" />
+                <>
+                  <line x1="18" y1="6" x2="6" y2="18" />
+                  <line x1="6" y1="6" x2="18" y2="18" />
+                </>
               ) : (
                 <>
-                  <path d="M3 6h20" />
-                  <path d="M3 12h20" />
-                  <path d="M3 18h20" />
+                  <line x1="3" y1="6" x2="21" y2="6" />
+                  <line x1="3" y1="12" x2="21" y2="12" />
+                  <line x1="3" y1="18" x2="21" y2="18" />
                 </>
               )}
             </svg>
@@ -127,7 +153,10 @@ export default function Header() {
               </a>
             ))}
 
-            <button className="mt-3 rounded-full bg-violet-600 py-3 font-semibold text-white transition hover:bg-violet-700">
+            <button
+              onClick={() => setOpen(false)}
+              className="mt-3 rounded-full bg-violet-600 py-3 font-semibold text-white transition hover:bg-violet-700"
+            >
               Сатып алу
             </button>
           </nav>
