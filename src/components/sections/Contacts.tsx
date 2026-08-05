@@ -34,7 +34,7 @@ export default function Contacts() {
           {/* Phone */}
 
           <a
-            href="tel:+77771234567"
+            href="tel:+77756064717"
             className="group rounded-[36px] border border-violet-100 bg-white p-10 shadow-lg transition duration-300 hover:-translate-y-2 hover:shadow-2xl"
           >
             <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-green-100 text-4xl">
