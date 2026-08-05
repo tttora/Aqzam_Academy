@@ -209,44 +209,50 @@ export default function Hero() {
           absolute 
           bottom-8 
           left-1/2 
-          z-20 
+          z-20
 
-          flex 
+          flex
+          w-[90%]
+          max-w-[850px]
+
           -translate-x-1/2
 
-          flex-col
-          sm:flex-row
+          items-center
+          justify-between
 
-          gap-6
+          rounded-[30px]
+          border
+          border-white/40
 
-          rounded-[30px] 
-          border 
-          border-white/40 
-          bg-white/70 
+          bg-white/70
 
-          px-8 
-          py-3 
+          px-6
+          py-4
 
-          shadow-xl 
+          shadow-xl
           backdrop-blur-xl
+
+          sm:px-10
         "
       >
 
 
-        <div className="text-center">
+        <div className="flex-1 text-center">
 
           <h2 
             className="
               font-heading 
-              text-4xl 
+              text-3xl
               font-bold 
               text-violet-700
+
+              sm:text-4xl
             "
           >
             5000+
           </h2>
 
-          <p className="mt-1 text-base text-slate-600">
+          <p className="text-sm text-slate-600 sm:text-base">
             Педагог
           </p>
 
@@ -254,34 +260,32 @@ export default function Hero() {
 
 
 
-
-        <div 
-          className="
-            hidden
-            sm:block
-            h-10 
-            w-px 
-            bg-slate-200
-          "
-        />
+        <div className="h-10 w-px bg-slate-200"></div>
 
 
 
-
-        <div className="text-center">
+        <div className="flex-1 text-center">
 
           <h2 
             className="
               font-heading 
-              text-4xl 
+              text-3xl
               font-bold 
               text-violet-700
+
+              sm:text-4xl
             "
           >
             25
           </h2>
 
-          <p className="mt-1 whitespace-nowrap text-base text-slate-600">
+          <p className="
+            text-sm 
+            whitespace-nowrap 
+            text-slate-600
+
+            sm:text-base
+          ">
             Авторлық материал
           </p>
 
@@ -289,36 +293,26 @@ export default function Hero() {
 
 
 
-
-
-        <div 
-          className="
-            hidden
-            sm:block
-            h-10 
-            w-px 
-            bg-slate-200
-          "
-        />
+        <div className="h-10 w-px bg-slate-200"></div>
 
 
 
-
-
-        <div className="text-center">
+        <div className="flex-1 text-center">
 
           <h2 
             className="
               font-heading 
-              text-4xl 
+              text-3xl
               font-bold 
               text-violet-700
+
+              sm:text-4xl
             "
           >
             15+
           </h2>
 
-          <p className="mt-1 whitespace-nowrap text-base text-slate-600">
+          <p className="text-sm text-slate-600 sm:text-base">
             Жыл тәжірибе
           </p>
 
