@@ -195,7 +195,7 @@ export default function Reviews() {
           </p>
 
           <a
-            href="https://instagram.com/aqzam_academy"
+            href="https://instagram.com/s_gulfairuz_"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-8 inline-flex items-center gap-3 rounded-full bg-white px-8 py-4 font-semibold text-violet-700 transition hover:scale-105"
