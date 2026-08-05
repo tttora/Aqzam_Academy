@@ -3,30 +3,11 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <section 
-      className="
-        relative 
-        overflow-hidden 
-        bg-white
-      " 
+      className="relative overflow-hidden bg-white" 
       id="hero"
     >
 
-      {/* Background */}
-      <div 
-        className="
-          absolute 
-          inset-0 
-          -z-10 
-          mt-20 
-          rounded-t-[50px] 
-          bg-gradient-to-b 
-          from-[#d3cae8] 
-          to-white
-        "
-      />
-
-
-      {/* Hero Content */}
+      {/* ===== Hero Content ===== */}
       <div 
         className="
           relative 
@@ -35,36 +16,44 @@ export default function Hero() {
           flex 
           min-h-[95vh] 
           max-w-7xl 
-          flex-col
-          items-center
-          justify-between
-          gap-12
+          justify-between 
           px-6 
-          pt-[180px]
+          pt-[260px]
+
+          flex-col
+          gap-12
 
           lg:flex-row
           lg:gap-0
-          lg:pt-[220px]
         "
       >
 
-
-        {/* LEFT */}
-
         <div 
           className="
-            relative 
-            z-10 
-            max-w-[750px]
-            text-center
-
-            lg:text-left
+            absolute 
+            inset-0 
+            -z-10 
+            mt-20 
+            rounded-t-[50px] 
+            bg-gradient-to-b 
+            from-[#d3cae8] 
+            to-white
           "
-        >
+        />
+
+
+        {/* Left */}
+
+        <div className="relative z-10 max-w-[750px]">
 
           <h1 
             className="
-              mb-8 
+              -mt-15 
+              mb-10 
+
+              ml-0
+              sm:ml-10
+
               font-heading 
               text-3xl 
               font-bold 
@@ -72,29 +61,27 @@ export default function Hero() {
               text-slate-900
 
               sm:text-4xl
-
-              lg:ml-10
-              lg:text-4xl
             "
           >
-            Мұғалімдер және репетиторларға,
-            балабақша тәрбиешілеріне:
-            ересек және мат топтарына
-            арналған заманауи оқу материалдары
+            Мұғалімдер және репетиторларға, балабақша тәрбиешілеріне:
+            ересек және мат топтарына арналған заманауи оқу материалдары
           </h1>
+
 
 
           <p 
             className="
               mb-10 
+
+              ml-0
+              sm:ml-10
+
               text-lg 
               leading-8 
               text-slate-700
 
               sm:text-xl
               sm:leading-9
-
-              lg:ml-10
             "
           >
             Оқушыларды қызықтыратын әдістер, сергіту сәттері,
@@ -108,15 +95,11 @@ export default function Hero() {
           <div 
             className="
               flex 
-              flex-col 
-              items-center 
+              flex-col
               gap-5
 
               sm:flex-row
-              sm:justify-center
-
-              lg:ml-10
-              lg:justify-start
+              sm:ml-10
             "
           >
 
@@ -158,23 +141,15 @@ export default function Hero() {
 
           </div>
 
-
         </div>
 
 
 
 
 
-        {/* RIGHT IMAGE */}
+        {/* Right */}
 
-        <div 
-          className="
-            relative
-            mt-5
-
-            lg:-mt-10
-          "
-        >
+        <div className="relative -mt-10">
 
           <div 
             className="
@@ -188,7 +163,6 @@ export default function Hero() {
               blur-3xl
             "
           />
-
 
           <div 
             className="
@@ -204,7 +178,7 @@ export default function Hero() {
               alt="Гульфайруз Ақзамқызы"
               width={460}
               height={500}
-              priority
+
               className="
                 h-[360px]
                 w-[300px]
@@ -214,12 +188,13 @@ export default function Hero() {
 
                 object-cover
               "
+
+              priority
             />
 
           </div>
 
         </div>
-
 
       </div>
 
@@ -227,7 +202,7 @@ export default function Hero() {
 
 
 
-      {/* Glass Stats */}
+      {/* ===== Floating Glass Card ===== */}
 
       <div 
         className="
@@ -237,13 +212,12 @@ export default function Hero() {
           z-20 
 
           flex 
-          w-[90%]
-          -translate-x-1/2 
+          -translate-x-1/2
 
           flex-col
-          items-center
+          sm:flex-row
 
-          gap-5
+          gap-6
 
           rounded-[30px] 
           border 
@@ -251,15 +225,10 @@ export default function Hero() {
           bg-white/70 
 
           px-8 
-          py-4
+          py-3 
 
           shadow-xl 
           backdrop-blur-xl
-
-
-          sm:flex-row
-          sm:justify-center
-          sm:gap-10
         "
       >
 
@@ -269,7 +238,7 @@ export default function Hero() {
           <h2 
             className="
               font-heading 
-              text-3xl 
+              text-4xl 
               font-bold 
               text-violet-700
             "
@@ -277,7 +246,7 @@ export default function Hero() {
             5000+
           </h2>
 
-          <p className="text-slate-600">
+          <p className="mt-1 text-base text-slate-600">
             Педагог
           </p>
 
@@ -285,16 +254,17 @@ export default function Hero() {
 
 
 
+
         <div 
           className="
-            hidden 
+            hidden
+            sm:block
             h-10 
             w-px 
             bg-slate-200
-
-            sm:block
           "
         />
+
 
 
 
@@ -303,7 +273,7 @@ export default function Hero() {
           <h2 
             className="
               font-heading 
-              text-3xl 
+              text-4xl 
               font-bold 
               text-violet-700
             "
@@ -311,7 +281,7 @@ export default function Hero() {
             25
           </h2>
 
-          <p className="text-slate-600">
+          <p className="mt-1 whitespace-nowrap text-base text-slate-600">
             Авторлық материал
           </p>
 
@@ -319,16 +289,19 @@ export default function Hero() {
 
 
 
+
+
         <div 
           className="
-            hidden 
+            hidden
+            sm:block
             h-10 
             w-px 
             bg-slate-200
-
-            sm:block
           "
         />
+
+
 
 
 
@@ -337,7 +310,7 @@ export default function Hero() {
           <h2 
             className="
               font-heading 
-              text-3xl 
+              text-4xl 
               font-bold 
               text-violet-700
             "
@@ -345,7 +318,7 @@ export default function Hero() {
             15+
           </h2>
 
-          <p className="text-slate-600">
+          <p className="mt-1 whitespace-nowrap text-base text-slate-600">
             Жыл тәжірибе
           </p>
 
