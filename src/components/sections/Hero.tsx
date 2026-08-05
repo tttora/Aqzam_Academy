@@ -2,81 +2,79 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section
-      id="hero"
+    <section 
       className="
-      relative
-      overflow-hidden
-      bg-white
-      pb-32
-      "
+        relative 
+        overflow-hidden 
+        bg-white
+      " 
+      id="hero"
     >
 
-
-      {/* BACKGROUND */}
-
-      <div
+      {/* Background */}
+      <div 
         className="
-        absolute
-        inset-x-0
-        top-20
-        -z-10
-        h-[90%]
-        rounded-t-[50px]
-        bg-gradient-to-b
-        from-[#d3cae8]
-        to-white
+          absolute 
+          inset-0 
+          -z-10 
+          mt-20 
+          rounded-t-[50px] 
+          bg-gradient-to-b 
+          from-[#d3cae8] 
+          to-white
         "
       />
 
 
-
-      {/* CONTENT */}
-
-      <div
+      {/* Hero Content */}
+      <div 
         className="
-        relative
-        z-10
-        mx-auto
-        flex
-        min-h-[95vh]
-        max-w-7xl
-        items-center
-        justify-between
-        gap-10
+          relative 
+          z-10 
+          mx-auto 
+          flex 
+          min-h-[95vh] 
+          max-w-7xl 
+          flex-col
+          items-center
+          justify-between
+          gap-12
+          px-6 
+          pt-[180px]
 
-        px-6
-        pt-[180px]
-
-        lg:pt-[220px]
+          lg:flex-row
+          lg:gap-0
+          lg:pt-[220px]
         "
       >
 
 
-
         {/* LEFT */}
 
-
-        <div
+        <div 
           className="
-          max-w-[750px]
+            relative 
+            z-10 
+            max-w-[750px]
+            text-center
+
+            lg:text-left
           "
         >
 
-          <h1
+          <h1 
             className="
-            mb-8
+              mb-8 
+              font-heading 
+              text-3xl 
+              font-bold 
+              leading-tight 
+              text-slate-900
 
-            font-heading
-            text-3xl
-            font-bold
-            leading-tight
+              sm:text-4xl
 
-            text-slate-900
-
-            sm:text-4xl
-
-            lg:text-4xl
+              lg:ml-10
+              lg:text-4xl
             "
           >
             Мұғалімдер және репетиторларға,
@@ -86,80 +84,80 @@ export default function Hero() {
           </h1>
 
 
-
-          <p
+          <p 
             className="
-            mb-10
+              mb-10 
+              text-lg 
+              leading-8 
+              text-slate-700
 
-            text-lg
-            leading-8
+              sm:text-xl
+              sm:leading-9
 
-            text-slate-700
-
-            sm:text-xl
-            sm:leading-9
+              lg:ml-10
             "
           >
-            Оқушыларды қызықтыратын әдістер,
-            сергіту сәттері, шаттық шеңбері,
-            авторлық кітаптар, бейнесабақтар
+            Оқушыларды қызықтыратын әдістер, сергіту сәттері,
+            шаттық шеңбері, авторлық кітаптар, бейнесабақтар
             және дайын материалдар арқылы
             педагогтердің кәсіби дамуына қолдау көрсетеміз.
           </p>
 
 
 
-          <div
+          <div 
             className="
-            flex
-            flex-col
-            gap-4
+              flex 
+              flex-col 
+              items-center 
+              gap-5
 
-            sm:flex-row
+              sm:flex-row
+              sm:justify-center
+
+              lg:ml-10
+              lg:justify-start
             "
           >
 
-            <a
+            <a 
               href="#products"
               className="
-              rounded-full
-              bg-violet-700
-              px-8
-              py-4
-              text-center
-              font-semibold
-              text-white
-
-              hover:bg-violet-800
+                rounded-full 
+                bg-violet-700 
+                px-8 
+                py-4 
+                font-semibold 
+                text-white 
+                transition 
+                hover:bg-violet-800
               "
             >
               Материалдарды қарау
             </a>
 
 
-
-            <a
+            <a 
               href="#aboutme"
               className="
-              rounded-full
-              border
-              border-violet-700
-              bg-white/70
-              px-8
-              py-4
-              text-center
-              font-semibold
-              text-violet-700
-              backdrop-blur-md
-
-              hover:bg-blue-50
+                rounded-full 
+                border 
+                border-violet-700 
+                bg-white/70 
+                px-8 
+                py-4 
+                font-semibold 
+                text-violet-700 
+                backdrop-blur-md 
+                transition 
+                hover:bg-blue-50
               "
             >
               Автор туралы
             </a>
 
-
           </div>
+
 
         </div>
 
@@ -169,45 +167,35 @@ export default function Hero() {
 
         {/* RIGHT IMAGE */}
 
-
-        <div
+        <div 
           className="
-          relative
-          hidden
+            relative
+            mt-5
 
-          sm:block
+            lg:-mt-10
           "
         >
 
-
-          <div
+          <div 
             className="
-            absolute
-            -right-10
-            -top-10
-
-            h-full
-            w-full
-
-            rounded-[40px]
-
-            bg-blue-200/30
-
-            blur-3xl
+              absolute 
+              -right-8 
+              -top-8 
+              h-full 
+              w-full 
+              rounded-[40px] 
+              bg-blue-200/30 
+              blur-3xl
             "
           />
 
 
-
-          <div
+          <div 
             className="
-            relative
-
-            overflow-hidden
-
-            rounded-[40px]
-
-            shadow-2xl
+              relative 
+              overflow-hidden 
+              rounded-[40px] 
+              shadow-2xl
             "
           >
 
@@ -217,15 +205,14 @@ export default function Hero() {
               width={460}
               height={500}
               priority
-
               className="
-              h-[400px]
-              w-[320px]
+                h-[360px]
+                w-[300px]
 
-              object-cover
+                sm:h-[460px]
+                sm:w-[400px]
 
-              lg:h-[460px]
-              lg:w-[400px]
+                object-cover
               "
             />
 
@@ -240,61 +227,51 @@ export default function Hero() {
 
 
 
+      {/* Glass Stats */}
 
-      {/* STATS */}
-
-
-      <div
+      <div 
         className="
-        absolute
+          absolute 
+          bottom-8 
+          left-1/2 
+          z-20 
 
-        bottom-[-70px]
+          flex 
+          w-[90%]
+          -translate-x-1/2 
 
-        left-1/2
+          flex-col
+          items-center
 
-        z-20
+          gap-5
 
-        flex
+          rounded-[30px] 
+          border 
+          border-white/40 
+          bg-white/70 
 
-        w-[90%]
+          px-8 
+          py-4
 
-        -translate-x-1/2
-
-        flex-col
-        items-center
-
-        gap-5
-
-        rounded-[30px]
-
-        border
-        border-white/40
-
-        bg-white/70
-
-        px-8
-        py-5
-
-        shadow-xl
-
-        backdrop-blur-xl
+          shadow-xl 
+          backdrop-blur-xl
 
 
-        sm:flex-row
-        sm:justify-center
-        sm:gap-10
+          sm:flex-row
+          sm:justify-center
+          sm:gap-10
         "
       >
 
 
         <div className="text-center">
 
-          <h2
+          <h2 
             className="
-            font-heading
-            text-3xl
-            font-bold
-            text-violet-700
+              font-heading 
+              text-3xl 
+              font-bold 
+              text-violet-700
             "
           >
             5000+
@@ -308,29 +285,27 @@ export default function Hero() {
 
 
 
-
-        <div
+        <div 
           className="
-          hidden
-          h-10
-          w-px
-          bg-slate-200
+            hidden 
+            h-10 
+            w-px 
+            bg-slate-200
 
-          sm:block
+            sm:block
           "
         />
 
 
 
-
         <div className="text-center">
 
-          <h2
+          <h2 
             className="
-            font-heading
-            text-3xl
-            font-bold
-            text-violet-700
+              font-heading 
+              text-3xl 
+              font-bold 
+              text-violet-700
             "
           >
             25
@@ -344,15 +319,14 @@ export default function Hero() {
 
 
 
-
-        <div
+        <div 
           className="
-          hidden
-          h-10
-          w-px
-          bg-slate-200
+            hidden 
+            h-10 
+            w-px 
+            bg-slate-200
 
-          sm:block
+            sm:block
           "
         />
 
@@ -360,12 +334,12 @@ export default function Hero() {
 
         <div className="text-center">
 
-          <h2
+          <h2 
             className="
-            font-heading
-            text-3xl
-            font-bold
-            text-violet-700
+              font-heading 
+              text-3xl 
+              font-bold 
+              text-violet-700
             "
           >
             15+
@@ -379,7 +353,6 @@ export default function Hero() {
 
 
       </div>
-
 
 
     </section>
