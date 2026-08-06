@@ -122,14 +122,14 @@ export default function Jinaktar() {
 
                     <div className="flex items-center justify-center gap-4 lg:gap-10">
                                     {/* Books */}
-                    <div className="relative h-[145px] w-[110px] sm:h-[200px] sm:w-[155px] lg:-left-13 lg:mt-10 lg:h-[340px] lg:w-[230px]">
+                    <div className="relative h-[120px] w-[90px] sm:h-[180px] sm:w-[135px] lg:-left-8 lg:mt-6 lg:h-[280px] lg:w-[190px]">
 
                         <Image
                         src="/images/обложки321-1.png"
                         alt="Әліппе"
                         width={220}
                         height={320}
-                        className="absolute left-0 top-0 w-[90px] rotate-[-20deg] rounded-xl shadow-2xl sm:w-[130px] lg:w-[220px]"
+                        className="absolute left-0 top-0 w-[75px] rotate-[-20deg] rounded-xl shadow-2xl sm:w-[110px] lg:w-[180px]"
                         />
 
                         <Image
@@ -137,7 +137,7 @@ export default function Jinaktar() {
                         alt="Математика"
                         width={220}
                         height={320}
-                        className="absolute left-4 top-2 w-[90px] rounded-xl shadow-2xl sm:left-6 sm:w-[130px] lg:left-8 lg:top-5 lg:w-[220px]"
+                        className="absolute left-4 top-2 w-[75px] rounded-xl shadow-2xl sm:left-6 sm:w-[110px] lg:left-8 lg:top-5 lg:w-[180px]"
                         />
 
                         <Image
@@ -145,7 +145,7 @@ export default function Jinaktar() {
                         alt="Диагностика"
                         width={220}
                         height={320}
-                        className="absolute left-8 top-5 w-[90px] rotate-[18deg] rounded-xl shadow-2xl sm:left-12 sm:w-[130px] lg:left-16 lg:top-10 lg:w-[220px]"
+                        className="absolute left-8 top-5 w-[75px] rotate-[18deg] rounded-xl shadow-2xl sm:left-12 sm:w-[110px] lg:left-16 lg:top-10 lg:w-[180px]"
                         />
 
                     </div>
@@ -159,7 +159,7 @@ export default function Jinaktar() {
                         alt="Сергіту сәттері"
                         width={200}
                         height={250}
-                        className="w-[90px] rounded-xl shadow-2xl sm:w-[130px] lg:w-[200px]"
+                        className="w-[75px] rounded-xl shadow-2xl sm:w-[110px] lg:w-[170px]"
                     />
 
                     </div>
@@ -168,7 +168,7 @@ export default function Jinaktar() {
 
             {/* SECOND OFFER */}
 
-            <div className="relative mt-14 overflow-visible rounded-[30px] bg-gradient-to-r from-violet-300 to-violet-200 p-6 shadow-2xl lg:mt-20 lg:overflow-hidden lg:rounded-[40px] lg:p-12">
+            <div className="relative mt-14 overflow-visible rounded-[30px] bg-gradient-to-r from-violet-300 to-violet-200 p-6 shadow-2xl lg:mt-20 lg:overflow-visible lg:rounded-[40px] lg:p-12">
 
                 <div className="mb-5 inline-block rounded-full bg-fuchsia-300 px-4 py-2 text-sm font-bold text-slate-900 lg:absolute lg:right-8 lg:top-8 lg:mb-0">
                     🔥 Арнайы ұсыныс
@@ -226,14 +226,14 @@ export default function Jinaktar() {
 
                     <div className="flex items-center justify-center gap-4 lg:gap-10">
                     {/* Books */}
-                    <div className="relative h-[150px] w-[115px] sm:h-[210px] sm:w-[160px] lg:-left-18 lg:mt-10 lg:h-[320px] lg:w-[230px]">
+                    <div className="relative h-[125px] w-[95px] sm:h-[185px] sm:w-[140px] lg:-left-8 lg:mt-10 lg:h-[280px] lg:w-[190px]">
 
                     <Image
                         src="/images/обложки321-1.png"
                         alt="Әліппе"
                         width={220}
                         height={320}
-                        className="absolute left-0 top-0 w-[90px] rotate-[-30deg] rounded-xl shadow-2xl sm:w-[130px] lg:w-[220px]"
+                        className="absolute left-0 top-0 w-[75px] rotate-[-30deg] rounded-xl shadow-2xl sm:w-[110px] lg:w-[180px]"
                     />
 
                     <Image
@@ -241,7 +241,7 @@ export default function Jinaktar() {
                         alt="Нейрожазу"
                         width={220}
                         height={320}
-                        className="absolute left-3 top-2 w-[90px] rotate-[-15deg] rounded-xl shadow-2xl sm:left-5 sm:w-[130px] lg:left-6 lg:w-[220px]"
+                        className="absolute left-3 top-2 w-[75px] rotate-[-15deg] rounded-xl shadow-2xl sm:left-5 sm:w-[110px] lg:left-6 lg:w-[180px]"
                     />
 
                     <Image
@@ -249,7 +249,7 @@ export default function Jinaktar() {
                         alt="Біз мектепке дайынбыз ба?"
                         width={220}
                         height={320}
-                        className="absolute left-6 top-4 w-[90px] rotate-[-5deg] rounded-xl shadow-2xl sm:left-9 sm:w-[130px] lg:left-12 lg:top-3 lg:w-[220px]"
+                        className="absolute left-6 top-4 w-[75px] rotate-[-5deg] rounded-xl shadow-2xl sm:left-9 sm:w-[110px] lg:left-12 lg:top-3 lg:w-[180px]"
                     />
 
                     <Image
@@ -257,7 +257,7 @@ export default function Jinaktar() {
                         alt="Математика"
                         width={220}
                         height={320}
-                        className="absolute left-9 top-6 w-[90px] rotate-[10deg] rounded-xl shadow-2xl sm:left-13 sm:w-[130px] lg:left-18 lg:top-5 lg:w-[220px]"
+                        className="absolute left-9 top-6 w-[75px] rotate-[10deg] rounded-xl shadow-2xl sm:left-13 sm:w-[110px] lg:left-18 lg:top-5 lg:w-[180px]"
                     />
 
                     <Image
@@ -265,7 +265,7 @@ export default function Jinaktar() {
                         alt="Диагностика"
                         width={220}
                         height={320}
-                        className="absolute left-12 top-8 w-[90px] rotate-[22deg] rounded-xl shadow-2xl sm:left-17 sm:w-[130px] lg:left-24 lg:top-8 lg:w-[220px]"
+                        className="absolute left-12 top-8 w-[75px] rotate-[22deg] rounded-xl shadow-2xl sm:left-17 sm:w-[110px] lg:left-24 lg:top-8 lg:w-[180px]"
                     />
 
                     </div>
@@ -279,7 +279,7 @@ export default function Jinaktar() {
                     alt="Сергіту сәті"
                     width={200}
                     height={250}
-                    className="w-[90px] rounded-xl shadow-2xl sm:w-[130px] lg:w-[200px]"
+                    className="w-[75px] rounded-xl shadow-2xl sm:w-[110px] lg:w-[170px]"
                     />
 
                 </div>
