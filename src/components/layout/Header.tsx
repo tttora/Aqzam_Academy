@@ -47,7 +47,7 @@ export default function Header() {
         {/* Logo */}
         <a href="/">
           <Image
-            src="/images/logo.png"
+            src="/images/logo.jpg"
             alt="Aqzam Academy"
             width={95}
             height={95}
