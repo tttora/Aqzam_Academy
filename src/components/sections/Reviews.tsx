@@ -8,31 +8,37 @@ const videoReviews = [
     name: "Айгүл Ж.",
     role: "Бастауыш сынып мұғалімі",
     video: "/images/отзыв1.mp4",
+    poster: "/images/r1.jpg",
   },
   {
     name: "Гүлнұр С.",
     role: "Тәрбиеші",
     video: "/images/отзыв2.mp4",
+    poster: "/images/r2.jpg",
   },
   {
     name: "Назерке А.",
     role: "Оқу орталығының жетекшісі",
     video: "/images/отзыв3.mp4",
+    poster: "/images/r3.jpg",
   },
   {
     name: "Айгүл Ф.",
     role: "Бастауыш сынып мұғалімі",
     video: "/images/отзыв4.mp4",
+    poster: "/images/r4.jpg",
   },
   {
     name: "Гүлнұр В.",
     role: "Тәрбиеші",
     video: "/images/отзыв5.mp4",
+    poster: "/images/r5.jpg",
   },
   {
     name: "Назерке Л.",
     role: "Оқу орталығының жетекшісі",
     video: "/images/отзыв6.mp4",
+    poster: "/images/r6.jpg"
   },
 ];
 
@@ -132,6 +138,7 @@ export default function Reviews() {
                 <video
                   controls
                   preload="metadata"
+                  poster={review.poster}
                   className="aspect-[9/16] w-full object-cover"
                 >
                   <source src={review.video} type="video/mp4" />

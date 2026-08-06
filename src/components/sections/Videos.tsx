@@ -78,6 +78,7 @@ export default function Videos() {
               key={videos[current].src}
               src={videos[current].src}
               controls
+              poster = "/images/sergitucover.png"
               className="h-[500px] w-[640px] object-cover object-[30%_50%] brightness-50"
             />
           </div>
