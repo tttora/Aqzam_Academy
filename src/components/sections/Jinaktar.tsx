@@ -120,9 +120,9 @@ export default function Jinaktar() {
 
                     {/* RIGHT */}
 
-                    <div className="mt-6 flex w-full items-end justify-center gap-2 overflow-visible sm:gap-4 lg:mt-0 lg:w-auto lg:gap-8">
+                    <div className="mt-6 flex w-full items-center justify-center gap-5 overflow-visible sm:gap-8 lg:mt-0 lg:w-auto lg:gap-14">
                                     {/* Books */}
-                    <div className="relative h-[170px] w-[120px] sm:h-[220px] sm:w-[170px] lg:-left-10 lg:mt-4 lg:h-[280px] lg:w-[190px]">
+                    <div className="relative h-[220px] w-[210px] sm:h-[260px] sm:w-[260px] lg:-left-10 lg:h-[340px] lg:w-[360px]">
 
                         <Image
                         src="/images/обложки321-1.png"
@@ -148,8 +148,8 @@ export default function Jinaktar() {
 
                     </div>
 
-                    <span className="mx-1 text-3xl font-bold text-black sm:mx-2 sm:text-5xl lg:mx-8 lg:text-7xl">
-                        +
+                    <span className="mx-2 text-5xl font-black text-black sm:text-6xl lg:mx-4 lg:text-8xl">
+                    +
                     </span>
 
                     <Image
@@ -157,7 +157,7 @@ export default function Jinaktar() {
                         alt="Сергіту сәттері"
                         width={200}
                         height={250}
-                        className="w-[95px] rounded-xl shadow-2xl sm:w-[135px] lg:w-[170px]"                    />
+                        className="w-[95px] self-center rounded-xl shadow-2xl sm:w-[135px] lg:w-[170px]"                    />
 
                     </div>
                 </div>
@@ -223,7 +223,7 @@ export default function Jinaktar() {
 
                     <div className="mt-6 flex w-full items-end justify-center gap-2 overflow-visible sm:gap-4 lg:mt-0 lg:w-auto lg:gap-8">
                     {/* Books */}
-                    <div className="relative h-[170px] w-[120px] sm:h-[220px] sm:w-[170px] lg:-left-10 lg:mt-4 lg:h-[280px] lg:w-[190px]">
+                    <div className="relative h-[220px] w-[210px] sm:h-[260px] sm:w-[260px] lg:-left-10 lg:h-[340px] lg:w-[360px]">
 
                     <Image
                         src="/images/обложки321-1.png"
@@ -267,7 +267,7 @@ export default function Jinaktar() {
 
                     </div>
 
-                    <span className="mx-1 text-3xl font-bold text-black sm:mx-2 sm:text-5xl lg:mx-8 lg:text-7xl">
+                    <span className="mx-2 text-5xl font-black text-black sm:text-6xl lg:mx-4 lg:text-8xl">
                     +
                     </span>
 
@@ -276,7 +276,7 @@ export default function Jinaktar() {
                     alt="Сергіту сәті"
                     width={200}
                     height={250}
-                    className="w-[95px] rounded-xl shadow-2xl sm:w-[135px] lg:w-[170px]"
+                    className="w-[95px] self-center rounded-xl shadow-2xl sm:w-[135px] lg:w-[170px]"
                     />
 
                 </div>
