@@ -81,7 +81,7 @@ export default function Jinaktar() {
                     </h3>
 
                     <p className="mt-6 text-lg leading-8 text-black lg:text-xl lg:leading-9">
-                        Баланы мектепке жан-жақты дайындауға арналған толық жинақ.
+                        Мектеп алды даярлық тобына арналған НЕГІЗГІ жинақ.
                     </p>
 
                     <div className="mt-8 flex flex-wrap items-end gap-4">
@@ -182,7 +182,7 @@ export default function Jinaktar() {
                     </h3>
 
                     <p className="mt-6 text-lg leading-8 text-black lg:text-xl lg:leading-9">
-                        Баланы мектепке жан-жақты дайындауға арналған толық жинақ.
+                        Мектеп алды даярлық тобына арналған ТОЛЫҚ жинақ.
                     </p>
 
                     <div className="mt-8 flex flex-wrap items-end gap-4">

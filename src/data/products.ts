@@ -67,20 +67,20 @@ export const products = [
     title: "Смарт әліппе сабағы",
     price: 20000,
     description: "5–12 жас аралығындағы балаларға арналған әліппе және жылдам оқу.",
-    image: "/images/placeholder.png",
+    image: "/images/смарт.png",
   },
   {
     id: 11,
     title: "Маджонг: Жылдам есеп шығару",
     price: 20000,
     description: "Бастауыш сынып оқушыларына арналған жылдам әрі оңай есеп шығару.",
-    image: "/images/placeholder.png",
+    image: "/images/маджонг.png",
   },
   {
     id: 12,
     title: "Сергіту сәті 2",
     price: 20000,
     description: "Балаларға арналған сергіту жаттығулары: жаңа топтама.",
-    image: "/images/placeholder.png",
+    image: "/images/sergitucover.png",
   },
 ];
