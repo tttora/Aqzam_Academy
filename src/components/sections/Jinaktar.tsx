@@ -37,7 +37,7 @@ export default function Jinaktar() {
   return (
     <section
       id="jinaktar"
-      className="relative -mt-10 overflow-hidden bg-white py-20 lg:-mt-25 lg:py-32"
+      className="relative -mt-1 overflow-hidden bg-white py-20 lg:-mt-25 lg:py-32"
     >
         <div className="mx-auto max-w-7xl px-5 sm:px-6">
 
@@ -122,7 +122,7 @@ export default function Jinaktar() {
 
                     <div className="flex items-center justify-center gap-4 lg:gap-10">
                                     {/* Books */}
-                    <div className="relative h-[120px] w-[90px] sm:h-[180px] sm:w-[135px] lg:-left-8 lg:mt-6 lg:h-[280px] lg:w-[190px]">
+                    <div className="relative h-[120px] w-[90px] sm:h-[180px] sm:w-[135px] lg:-left-18 lg:mt-6 lg:h-[280px] lg:w-[190px]">
 
                         <Image
                         src="/images/обложки321-1.png"
@@ -226,7 +226,7 @@ export default function Jinaktar() {
 
                     <div className="flex items-center justify-center gap-4 lg:gap-10">
                     {/* Books */}
-                    <div className="relative h-[125px] w-[95px] sm:h-[185px] sm:w-[140px] lg:-left-8 lg:mt-10 lg:h-[280px] lg:w-[190px]">
+                    <div className="relative h-[125px] w-[95px] sm:h-[185px] sm:w-[140px] lg:-left-18 lg:mt-10 lg:h-[280px] lg:w-[190px]">
 
                     <Image
                         src="/images/обложки321-1.png"
