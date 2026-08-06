@@ -17,7 +17,7 @@ export default function PreviewModal({
       onClick={onClose}
     >
       <div
-        className="relative w-full max-w-[320px] overflow-hidden rounded-[28px] bg-white shadow-2xl"
+        className="relative w-full max-w-4xl overflow-hidden rounded-[28px] bg-white shadow-2xl"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close */}
@@ -32,10 +32,10 @@ export default function PreviewModal({
         {/* Video */}
 
         <video
-          controls
-          autoPlay
-          playsInline
-          className="mx-auto aspect-[9/16] max-h-[65vh] w-full bg-black object-contain"
+        controls
+        autoPlay
+        playsInline
+        className="aspect-video w-full bg-black"
         >
           <source src={video} type="video/mp4" />
         </video>
