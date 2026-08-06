@@ -2,12 +2,14 @@
 import Image from "next/image";
 import { useState } from "react";
 import OrderModal from "@/components/OrderModal";
+import PreviewModal from "@/components/sections/PreviewModal";
 
 type ProductCardProps = {
   title: string;
   price: number;
   description: string;
   image: string;
+  previewVideo?: string;
 };
 
 export default function ProductCard({
@@ -15,8 +17,10 @@ export default function ProductCard({
   price,
   description,
   image,
+  previewVideo,
 }: ProductCardProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const [previewOpen, setPreviewOpen] = useState(false);
   return (
     <>
         <div className="rounded-3xl bg-[#e8e4f2] p-4 shadow-md transition duration-300 hover:-translate-y-2 hover:shadow-xl">        
@@ -43,6 +47,15 @@ export default function ProductCard({
               <span>💬 Telegram</span>
             </div>
 
+            {previewVideo && (
+              <button
+                onClick={() => setPreviewOpen(true)}
+                className="mb-6 flex items-center gap-2 text-sm font-semibold text-violet-700 transition hover:text-violet-900"
+              >
+                ▶ Үзіндіні көру
+              </button>
+            )}
+
             <div className="flex items-center justify-between">
               <p className="text-2xl font-bold text-violet-700">
                 {price} ₸
@@ -59,6 +72,13 @@ export default function ProductCard({
             product={title}
             amount={price}
             onClose={() => setIsOpen(false)}
+          />
+        )}
+        {previewOpen && previewVideo && (
+          <PreviewModal
+            title={title}
+            video={previewVideo}
+            onClose={() => setPreviewOpen(false)}
           />
         )}
     </>

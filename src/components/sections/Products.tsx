@@ -28,6 +28,7 @@ export default function Products() {
             price={product.price}
             description={product.description}
             image={product.image}
+            previewVideo={product.previewVideo}
           />
         ))}
       </div>

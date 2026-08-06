@@ -5,6 +5,7 @@ export const products = [
       price: 20000,
       description: "5–12 жас аралығындағы балаларға арналған әліппе және жылдам оқу.",
       image: "/images/обложки321-5.png",
+      previewVideo: "/videos/alippe-preview.mp4",
     },
   {
     id: 2,
@@ -12,6 +13,7 @@ export const products = [
     price: 20000,
     description: "Балаларға арналған сергіту жаттығулары",
     image: "/images/sergitucover.png",
+    previewVideo: "/videos/alippe-preview.mp4",
   },
   {
     id: 3,
@@ -19,6 +21,7 @@ export const products = [
     price: 20000,
     description: "Оқу дағдыларын дамытуға арналған материал",
     image: "/images/обложки321-1.png",
+    previewVideo: "/videos/alippe-preview.mp4",
   },
   {
     id: 4,
@@ -26,6 +29,7 @@ export const products = [
     price: 20000,
     description: "Мектепке дейінгі балаларға арналған математика тапсырмалары.",
     image: "/images/обложки321-2.png",
+    previewVideo: "/videos/alippe-preview.mp4",
   },
   {
     id: 5,
@@ -33,6 +37,7 @@ export const products = [
     price: 20000,
     description: "Жазу дағдыларын дамытуға арналған нейрожаттығулар.",
     image: "/images/обложки321-4.png",
+    previewVideo: "/videos/alippe-preview.mp4",
   },
   {
     id: 6,
@@ -40,6 +45,7 @@ export const products = [
     price: 20000,
     description: "Баланың мектепке дайындығын анықтауға арналған құрал.",
     image: "/images/обложки321-3.png",
+    previewVideo: "/videos/alippe-preview.mp4",
   },
   {
     id: 7,
@@ -47,6 +53,7 @@ export const products = [
     price: 20000,
     description: "Бастауыш сынып оқушыларына арналған қазақ тілі материалы.",
     image: "/images/Қазақ Тілі-1.png",
+    previewVideo: "/videos/alippe-preview.mp4",
   },
   {
     id: 8,
@@ -54,6 +61,7 @@ export const products = [
     price: 20000,
     description: "Көбейту кестесін жеңіл әрі қызықты меңгеруге арналған жинақ.",
     image: "/images/Кестелі Математика-1.png",
+    previewVideo: "/videos/alippe-preview.mp4",
   },
   {
     id: 9,
@@ -61,6 +69,7 @@ export const products = [
     price: 20000,
     description: "Педагогтарға арналған тәжірибелік нейропсихология курсы.",
     image: "/images/нейропсихология.png",
+    previewVideo: "/videos/alippe-preview.mp4",
   },
   {
     id: 10,
@@ -68,6 +77,7 @@ export const products = [
     price: 20000,
     description: "5–12 жас аралығындағы балаларға арналған әліппе және жылдам оқу.",
     image: "/images/смарт.png",
+    previewVideo: "/videos/alippe-preview.mp4",
   },
   {
     id: 11,
@@ -75,6 +85,7 @@ export const products = [
     price: 20000,
     description: "Бастауыш сынып оқушыларына арналған жылдам әрі оңай есеп шығару.",
     image: "/images/маджонг.png",
+    previewVideo: "/videos/alippe-preview.mp4",
   },
   {
     id: 12,
@@ -82,5 +93,6 @@ export const products = [
     price: 20000,
     description: "Балаларға арналған сергіту жаттығулары: жаңа топтама.",
     image: "/images/sergitucover.png",
+    previewVideo: "/videos/alippe-preview.mp4",
   },
 ];
