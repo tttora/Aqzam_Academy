@@ -221,7 +221,7 @@ export default function Jinaktar() {
 
                     {/* RIGHT */}
 
-                    <div className="mt-6 flex w-full items-end justify-center gap-2 overflow-visible sm:gap-4 lg:mt-0 lg:w-auto lg:gap-8">
+                    <div className="mt-6 flex w-full items-center justify-center gap-5 overflow-visible sm:gap-8 lg:mt-0 lg:w-auto lg:gap-14">
                     {/* Books */}
                     <div className="relative h-[220px] w-[210px] sm:h-[260px] sm:w-[260px] lg:-left-10 lg:h-[340px] lg:w-[360px]">
 
