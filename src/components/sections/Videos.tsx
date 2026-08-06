@@ -73,7 +73,7 @@ export default function Videos() {
 
           {/* Video */}
 
-          <div className="overflow-hidden rounded-[40px] bg-white shadow-2xl">
+          <div className="overflow-hidden rounded-[40px] shadow-2xl">
             <video
               key={videos[current].src}
               src={videos[current].src}

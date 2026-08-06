@@ -132,7 +132,7 @@ export default function Reviews() {
                 <video
                   controls
                   preload="metadata"
-                  className="aspect-[9/16] w-full bg-black object-cover"
+                  className="aspect-[9/16] w-full object-cover"
                 >
                   <source src={review.video} type="video/mp4" />
                 </video>
