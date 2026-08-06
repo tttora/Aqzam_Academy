@@ -5,38 +5,38 @@ import Image from "next/image";
 
 const videoReviews = [
   {
-    name: "Айгүл Ж.",
-    role: "Бастауыш сынып мұғалімі",
-    video: "/images/отзыв1.mp4",
+    name: "Айгерім ханым",
+    role: "Intellecto оқу орталығының директоры",
+    video: "/images/r1.mp4",
     poster: "/images/r1.jpg",
   },
   {
-    name: "Гүлнұр С.",
-    role: "Тәрбиеші",
+    name: "Зәмзәгүл ханым",
+    role: "Тарих пәнінің мұғалімі",
     video: "/images/отзыв2.mp4",
     poster: "/images/r2.jpg",
   },
   {
-    name: "Назерке А.",
-    role: "Оқу орталығының жетекшісі",
+    name: "Нұргүл ханым",
+    role: "Оқу орталығының директоры",
     video: "/images/отзыв3.mp4",
     poster: "/images/r3.jpg",
   },
   {
-    name: "Айгүл Ф.",
-    role: "Бастауыш сынып мұғалімі",
+    name: "Гүлшат ханым",
+    role: "МАД мұғалімі",
     video: "/images/отзыв4.mp4",
     poster: "/images/r4.jpg",
   },
   {
-    name: "Гүлнұр В.",
-    role: "Тәрбиеші",
+    name: "Ақмаржан ханым",
+    role: "Бастауыш сынып мұғалімі",
     video: "/images/отзыв5.mp4",
     poster: "/images/r5.jpg",
   },
   {
-    name: "Назерке Л.",
-    role: "Оқу орталығының жетекшісі",
+    name: "Ғазиза ханым",
+    role: "Оқу орталығының директоры",
     video: "/images/отзыв6.mp4",
     poster: "/images/r6.jpg"
   },
