@@ -36,8 +36,8 @@ const collections = [
 export default function Jinaktar() {
   return (
     <section
-      id="jinaktar"
-      className="relative -mt-1 overflow-hidden bg-white py-20 lg:-mt-25 lg:py-32"
+    id="jinaktar"
+    className="relative -mt-1 overflow-visible bg-white py-20 lg:-mt-25 lg:py-32"
     >
         <div className="mx-auto max-w-7xl px-5 sm:px-6">
 
