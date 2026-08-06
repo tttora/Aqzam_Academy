@@ -267,7 +267,7 @@ export default function Jinaktar() {
 
                     </div>
 
-                    <span className="relative -top-12 mx-2 text-5xl font-black text-black sm:-top-10 sm:text-6xl lg:-top-10 lg:mx-4 lg:text-8xl">
+                    <span className="mx-2 text-5xl font-black text-black sm:text-6xl lg:mx-4 lg:text-8xl">
                     +
                     </span>
 
