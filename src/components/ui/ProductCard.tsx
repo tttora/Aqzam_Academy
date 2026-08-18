@@ -49,7 +49,7 @@ export default function ProductCard({
               <div className="flex flex-wrap gap-3 text-sm text-slate-600">
                 <span>📘 Кітап (PDF форматта)</span>
 
-                <span>🎥 Оқытылу әдістері бар видеосабақ</span>
+                <span>🎥 Оқыту әдістері бар видеосабақ</span>
 
                 <span>💬 Telegram каналға шексіз доступ</span>
               </div>
