@@ -10,7 +10,7 @@ export const products = [
   {
     id: 2,
     title: "Сергіту сәті",
-    price: 20000,
+    price: 5000,
     description: "Балаларға арналған сергіту жаттығулары",
     image: "/images/sergitucover.png",
     previewVideo: "/videos/alippe-preview.mp4",
@@ -74,7 +74,7 @@ export const products = [
   {
     id: 10,
     title: "Смарт әліппе сабағы",
-    price: 20000,
+    price: 5000,
     description: "5–12 жас аралығындағы балаларға арналған әліппе және жылдам оқу.",
     image: "/images/смарт.png",
     previewVideo: "/videos/alippe-preview.mp4",
@@ -90,7 +90,7 @@ export const products = [
   {
     id: 12,
     title: "Сергіту сәті 2",
-    price: 20000,
+    price: 5000,
     description: "Балаларға арналған сергіту жаттығулары: жаңа топтама.",
     image: "/images/sergitucover.png",
     previewVideo: "/videos/alippe-preview.mp4",
