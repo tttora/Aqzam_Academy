@@ -1,5 +1,8 @@
-import Image from "next/image";
+"use client";
 
+import Image from "next/image";
+import { useState } from "react";
+import OrderModal from "@/components/OrderModal";
 const collections = [
   {
     title: "Әліппе",
@@ -34,6 +37,16 @@ const collections = [
 ];
 
 export default function Jinaktar() {
+    const [isOpen, setIsOpen] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState({
+    title: "",
+    price: 0,
+  });
+
+  const openOrder = (title: string, price: number) => {
+    setSelectedProduct({ title, price });
+    setIsOpen(true);
+  };
   return (
     <section
     id="jinaktar"
@@ -112,7 +125,15 @@ export default function Jinaktar() {
 
                     </div>
 
-                    <button className="mt-10 w-full rounded-full bg-white px-8 py-4 text-lg font-bold text-violet-900 transition hover:scale-105 lg:w-auto lg:px-11 lg:py-5 lg:text-2xl">
+                    <button
+                    onClick={() =>
+                        openOrder(
+                        "Диагностика + Әліппе + Математика + Сергіту сәті",
+                        49990
+                        )
+                    }
+                    className="mt-10 w-full rounded-full bg-white px-8 py-4 text-lg font-bold text-violet-900 transition hover:scale-105 lg:w-auto lg:px-11 lg:py-5 lg:text-2xl"
+                    >
                         🔥 Қазір сатып алу
                     </button>
 
@@ -213,7 +234,15 @@ export default function Jinaktar() {
 
                     </div>
 
-                    <button className="mt-10 w-full rounded-full bg-white px-8 py-4 text-lg font-bold text-violet-900 transition hover:scale-105 lg:w-auto lg:px-11 lg:py-5 lg:text-2xl">
+                    <button
+                    onClick={() =>
+                        openOrder(
+                        'Диагностика + Әліппе + Математика + "Біз мектепке дайынбыз ба?" + Нейрожазу + Сергіту сәті',
+                        59990
+                        )
+                    }
+                    className="mt-10 w-full rounded-full bg-white px-8 py-4 text-lg font-bold text-violet-900 transition hover:scale-105 lg:w-auto lg:px-11 lg:py-5 lg:text-2xl"
+                    >
                         🔥 Қазір сатып алу
                     </button>
 
@@ -365,7 +394,12 @@ export default function Jinaktar() {
 
                         </div>
 
-                        <button className="mt-10 w-full rounded-full bg-white px-8 py-4 text-lg font-bold text-violet-900 transition hover:scale-105 lg:w-auto lg:px-11 lg:py-5 lg:text-2xl">
+                        <button
+                        onClick={() =>
+                            openOrder("Табысты репетитор", 149990)
+                        }
+                        className="mt-10 w-full rounded-full bg-white px-8 py-4 text-lg font-bold text-violet-900 transition hover:scale-105 lg:w-auto lg:px-11 lg:py-5 lg:text-2xl"
+                        >
                             👑 Курсқа қатысу
                         </button>
 
@@ -411,6 +445,13 @@ export default function Jinaktar() {
 
                 </div>
             </div>
+            {isOpen && (
+                <OrderModal
+                    product={selectedProduct.title}
+                    amount={selectedProduct.price}
+                    onClose={() => setIsOpen(false)}
+                />
+                )}
          </div>
     </section>
   );

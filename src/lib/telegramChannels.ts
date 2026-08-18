@@ -46,4 +46,35 @@ export const telegramChannels: Record<string, string[]> = {
   "Сергіту сәті 2": [
     "https://t.me/+KRDuP8GUDBM0Yjky",
   ],
+    "Диагностика + Әліппе + Математика + Сергіту сәті": [
+    "https://t.me/+ypoUvNmygqdlNDYy",
+    "https://t.me/+_ARUeUPBDkBiM2Iy",
+    "https://t.me/+CYVH0E4XJ-M0YzM6",
+    "https://t.me/+12YLcttwUWRmNjk6",
+    "https://t.me/+KRDuP8GUDBM0Yjky",
+  ],
+
+  'Диагностика + Әліппе + Математика + "Біз мектепке дайынбыз ба?" + Нейрожазу + Сергіту сәті': [
+    "https://t.me/+ypoUvNmygqdlNDYy",
+    "https://t.me/+_ARUeUPBDkBiM2Iy",
+    "https://t.me/+CYVH0E4XJ-M0YzM6",
+    "https://t.me/+ukjcSTPNJ9FhNTBi",
+    "https://t.me/+gRVM7YzKozg4Zjgy",
+    "https://t.me/+12YLcttwUWRmNjk6",
+    "https://t.me/+KRDuP8GUDBM0Yjky",
+  ],
+
+  "Табысты репетитор": [
+    "https://t.me/+ypoUvNmygqdlNDYy",
+    "https://t.me/+_ARUeUPBDkBiM2Iy",
+    "https://t.me/+CYVH0E4XJ-M0YzM6",
+    "https://t.me/+ukjcSTPNJ9FhNTBi",
+    "https://t.me/+gRVM7YzKozg4Zjgy",
+    "https://t.me/+12YLcttwUWRmNjk6",
+    "https://t.me/+HSiDQYwDb-wwOGM6",
+    "https://t.me/+e5-yXgTYDWs2Zjgy",
+    "https://t.me/+NR06i9tmvHlhODFi",
+    "https://t.me/+-6J70Od-x5gwYTVi",
+    "https://t.me/+hdV2t9kdhGoxMzgy",
+  ],
 };
