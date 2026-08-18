@@ -13,6 +13,7 @@ export const products = [
     price: 5000,
     description: "Балаларға арналған сергіту жаттығулары",
     image: "/images/sergitucover.png",
+    previewVideo: "/images/sergituuu.mp4",
   },
   {
     id: 3,
@@ -84,6 +85,7 @@ export const products = [
     price: 5000,
     description: "Бастауыш сынып оқушыларына арналған жылдам әрі оңай есеп шығару.",
     image: "/images/маджонг.png",
+    previewVideo: "/images/majong.mp4",
   },
   {
     id: 12,
