@@ -280,6 +280,7 @@ export default function Jinaktar() {
                     />
 
                 </div>
+              </div>
           </div>
           {/* THIRD OFFER — ТАБЫСТЫ РЕПЕТИТОР */}
 
@@ -307,9 +308,9 @@ export default function Jinaktar() {
                         </p>
 
                         <p className="mt-4 text-base leading-7 text-black/80 lg:text-lg lg:leading-8">
-                            Репетиторларға арналған толық авторлық жүйе:
-                            дайын материалдар, бейнесабақтар, әдістемелер,
-                            тапсырмалар және жұмысқа қажетті барлық құралдар.
+                            МАД тәрбиешілеріне, бастауыш сынып мұғалімдеріне, жас мамандарға, репетиторларға арналған толық авторлық курс:
+                            дайын материалдар, бейнесабақтар, әдістемелер, көрнекіліктер,
+                            тапсырмалар және сабаққа қажетті барлық ақпарат.
                         </p>
 
                         {/* PRICE */}
@@ -317,7 +318,7 @@ export default function Jinaktar() {
                         <div className="mt-8 flex flex-wrap items-end gap-4">
 
                             <span className="text-xl text-gray-600 line-through lg:text-3xl">
-                                200 000 ₸
+                                300 000 ₸
                             </span>
 
                             <span className="font-heading text-4xl font-bold text-black sm:text-5xl lg:text-6xl">
@@ -325,7 +326,7 @@ export default function Jinaktar() {
                             </span>
 
                             <span className="rounded-full bg-red-600 px-4 py-2 text-base font-semibold text-white lg:text-xl">
-                                -25%
+                                -50%
                             </span>
 
                         </div>
@@ -411,7 +412,6 @@ export default function Jinaktar() {
                 </div>
             </div>
          </div>
-        </div>
     </section>
   );
 }

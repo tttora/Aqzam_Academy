@@ -41,16 +41,24 @@ export default function ProductCard({
               {description}
             </p>
 
-            <div className="mb-6 flex items-center gap-3 text-sm text-slate-500">
-              <span>📘 PDF</span>
-              <span>🎥 Видео</span>
-              <span>💬 Telegram</span>
+            <div className="mb-4 rounded-2xl bg-white/60 p-4">
+              <p className="mb-3 text-sm font-bold text-violet-900">
+                📦 САТЫП АЛҒАНДА СІЗГЕ БЕРІЛЕДІ:
+              </p>
+
+              <div className="flex flex-wrap gap-3 text-sm text-slate-600">
+                <span>📘 Кітап (PDF форматта)</span>
+
+                <span>🎥 Оқытылу әдістері бар видеосабақ</span>
+
+                <span>💬 Telegram каналға шексіз доступ</span>
+              </div>
             </div>
 
             {previewVideo && (
               <button
                 onClick={() => setPreviewOpen(true)}
-                className="mb-6 flex items-center gap-2 text-sm font-semibold text-violet-700 transition hover:text-violet-900"
+                className="mb-6 flex items-center gap-2 text-xl font-semibold text-violet-700 transition hover:text-violet-900"
               >
                 ▶ Үзіндіні көру
               </button>
