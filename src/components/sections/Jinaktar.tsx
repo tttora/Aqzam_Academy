@@ -418,7 +418,7 @@ export default function Jinaktar() {
                         <div className="relative z-10">
 
                             <Image
-                                src="/images/tabysty-repetitor.png"
+                                src="/images/1stpage.png"
                                 alt="Табысты репетитор"
                                 width={360}
                                 height={500}
