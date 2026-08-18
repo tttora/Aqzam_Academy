@@ -214,6 +214,8 @@ export async function POST(req: Request) {
 
           Сіздің тапсырысыңыз:
           ${order.product}
+          
+          Cілтемеге өтіп төлем жасаңыз: https://pay.kaspi.kz/pay/hkldv1vm
 
           Төлем расталғаннан кейін материалдарға қолжетімділік беріледі.
           `,

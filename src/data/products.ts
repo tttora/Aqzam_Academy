@@ -82,7 +82,7 @@ export const products = [
   {
     id: 11,
     title: "Маджонг: Жылдам есеп шығару",
-    price: 20000,
+    price: 5000,
     description: "Бастауыш сынып оқушыларына арналған жылдам әрі оңай есеп шығару.",
     image: "/images/маджонг.png",
     previewVideo: "/videos/alippe-preview.mp4",
