@@ -281,6 +281,135 @@ export default function Jinaktar() {
 
                 </div>
           </div>
+          {/* THIRD OFFER — ТАБЫСТЫ РЕПЕТИТОР */}
+
+            <div className="relative mt-14 overflow-hidden rounded-[30px] bg-gradient-to-br from-violet-400 via-violet-300 to-fuchsia-200 p-6 shadow-2xl lg:mt-20 lg:rounded-[40px] lg:p-12">
+
+                {/* Badge */}
+
+                <div className="mb-6 inline-block rounded-full bg-white/70 px-4 py-2 text-sm font-bold text-violet-900 backdrop-blur-md lg:absolute lg:right-8 lg:top-8 lg:mb-0">
+                    👑 ПРЕМИУМ КУРС
+                </div>
+
+                <div className="flex flex-col items-center gap-12 lg:flex-row lg:justify-between lg:gap-16">
+
+                    {/* LEFT */}
+
+                    <div className="max-w-2xl">
+
+                        <h3 className="font-heading text-3xl font-bold text-black sm:text-4xl lg:text-5xl">
+                            «Табысты репетитор»
+                        </h3>
+
+                        <p className="mt-5 text-xl font-semibold text-violet-950 lg:text-2xl">
+                            Репетиторлықты нөлден бастап,
+                            табысты маман болуға дейінгі толық курс.
+                        </p>
+
+                        <p className="mt-4 text-base leading-7 text-black/80 lg:text-lg lg:leading-8">
+                            Репетиторларға арналған толық авторлық жүйе:
+                            дайын материалдар, бейнесабақтар, әдістемелер,
+                            тапсырмалар және жұмысқа қажетті барлық құралдар.
+                        </p>
+
+                        {/* PRICE */}
+
+                        <div className="mt-8 flex flex-wrap items-end gap-4">
+
+                            <span className="text-xl text-gray-600 line-through lg:text-3xl">
+                                200 000 ₸
+                            </span>
+
+                            <span className="font-heading text-4xl font-bold text-black sm:text-5xl lg:text-6xl">
+                                149 990 ₸
+                            </span>
+
+                            <span className="rounded-full bg-red-600 px-4 py-2 text-base font-semibold text-white lg:text-xl">
+                                -25%
+                            </span>
+
+                        </div>
+
+                        {/* CONTENT */}
+
+                        <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-2">
+
+                            <div className="rounded-2xl bg-white/30 p-4 backdrop-blur-md">
+                                <p className="text-2xl">📚</p>
+                                <p className="mt-2 font-semibold text-black">
+                                    Барлық материалдар
+                                </p>
+                            </div>
+
+                            <div className="rounded-2xl bg-white/30 p-4 backdrop-blur-md">
+                                <p className="text-2xl">🎥</p>
+                                <p className="mt-2 font-semibold text-black">
+                                    Бейнесабақтар
+                                </p>
+                            </div>
+
+                            <div className="rounded-2xl bg-white/30 p-4 backdrop-blur-md">
+                                <p className="text-2xl">📝</p>
+                                <p className="mt-2 font-semibold text-black">
+                                    Дайын әдістемелер
+                                </p>
+                            </div>
+
+                            <div className="rounded-2xl bg-white/30 p-4 backdrop-blur-md">
+                                <p className="text-2xl">💼</p>
+                                <p className="mt-2 font-semibold text-black">
+                                    Репетиторлық жүйе
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <button className="mt-10 w-full rounded-full bg-white px-8 py-4 text-lg font-bold text-violet-900 transition hover:scale-105 lg:w-auto lg:px-11 lg:py-5 lg:text-2xl">
+                            👑 Курсқа қатысу
+                        </button>
+
+                    </div>
+
+                    {/* RIGHT */}
+
+                    <div className="relative flex w-full items-center justify-center lg:w-[420px]">
+
+                        {/* Decorative glow */}
+
+                        <div className="absolute h-[300px] w-[300px] rounded-full bg-white/30 blur-3xl" />
+
+                        {/* Main course cover */}
+
+                        <div className="relative z-10">
+
+                            <Image
+                                src="/images/tabysty-repetitor.png"
+                                alt="Табысты репетитор"
+                                width={360}
+                                height={500}
+                                className="w-[220px] rounded-2xl shadow-2xl sm:w-[270px] lg:w-[320px]"
+                            />
+
+                        </div>
+
+                        {/* Small floating cards */}
+
+                        <div className="absolute -left-2 top-8 z-20 rounded-2xl bg-white/85 px-4 py-3 shadow-xl backdrop-blur-md sm:-left-6">
+                            <p className="text-sm font-bold text-violet-900">
+                                📚 БАРЛЫҒЫ БІР КУРСТА
+                            </p>
+                        </div>
+
+                        <div className="absolute -right-2 bottom-10 z-20 rounded-2xl bg-white/85 px-4 py-3 shadow-xl backdrop-blur-md sm:-right-6">
+                            <p className="text-sm font-bold text-violet-900">
+                                🎓 ДАЙЫН ЖҮЙЕ
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
          </div>
         </div>
     </section>

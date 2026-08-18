@@ -48,7 +48,7 @@ export default function PreviewModal({
           </h2>
 
           <p className="mt-3 text-slate-600">
-            Бұл толық курстың қысқартылған 3 минуттық үзіндісі.
+            Бұл толық курстың қысқартылған 1 минуттық үзіндісі.
           </p>
         </div>
       </div>

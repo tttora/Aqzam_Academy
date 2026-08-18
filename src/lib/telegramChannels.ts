@@ -1,42 +1,49 @@
 export const telegramChannels: Record<string, string[]> = {
   "Диагностика": [
-    "https://t.me/+5xQFk_72hGNmMDcy",
+    "https://t.me/+ypoUvNmygqdlNDYy",
   ],
 
   "Сергіту сәті": [
-    "ССЫЛКА_КАНАЛА_СЕРГІТУ",
+    "https://t.me/+12YLcttwUWRmNjk6",
   ],
 
   "Әліппе / Жылдам оқу": [
-    "https://t.me/+kkTkSxbifXUyNGJi",
-    "https://t.me/+RgPd0C48loo4OWEy",
+    "https://t.me/+_ARUeUPBDkBiM2Iy",
   ],
 
   "Математика 5–7 жас": [
-    "https://t.me/+2o7-5bF-S41kMWUy",
+    "https://t.me/+CYVH0E4XJ-M0YzM6",
   ],
 
   "Нейрожазу": [
-    "https://t.me/+8__mjcU6J5M4YmZi",
+    "https://t.me/+gRVM7YzKozg4Zjgy",
   ],
 
   "Біз мектепке дайынбыз ба?": [
-    "https://t.me/+L9Dm3wCSTmxhNTQy",
+    "https://t.me/+ukjcSTPNJ9FhNTBi",
   ],
 
   "Қазақ тілі 1–4 сынып": [
-    "https://t.me/+uBXh8XVWJncyNjVi",
+    "https://t.me/+HSiDQYwDb-wwOGM6",
   ],
 
   "Кестелі математика": [
-    "https://t.me/+YWsSOy6LK1oxYjZi",
+    "https://t.me/+e5-yXgTYDWs2Zjgy",
   ],
 
   "Педагогтарға арналған нейропсихология": [
-    "https://t.me/+L8EzGVeDTMY1ZWVi",
+    "https://t.me/+NR06i9tmvHlhODFi",
   ],
 
   "Смарт әліппе сабағы": [
-    "https://t.me/+XvAzfXYpTtw1NWY6",
+    "https://t.me/+-6J70Od-x5gwYTVi",
+  ],
+
+  "Маджонг: Жылдам есеп шығару": [
+    "https://t.me/+hdV2t9kdhGoxMzgy",
+  ],
+
+  "Сергіту сәті 2": [
+    "https://t.me/+KRDuP8GUDBM0Yjky",
   ],
 };
